@@ -12,7 +12,6 @@ namespace Mikusuto.Input
         
         [Header("Input Settings")]
         [SerializeField] private bool enableGamepadSupport = true;
-        [SerializeField] private float gamepadDeadzone = 0.1f;
         
         public PlayerInputActions InputActions => inputActions;
         
@@ -42,9 +41,9 @@ namespace Mikusuto.Input
         
         void SetupGamepadSettings()
         {
-            // Configure gamepad dead zone for movement
+            // Configure gamepad settings
             var movementAction = inputActions.Player.Movement;
-            // Dead zone configuration would be handled in the input action asset
+            // Additional gamepad configuration can be added here if needed
         }
         
         void OnEnable()

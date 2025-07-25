@@ -8,6 +8,8 @@ namespace Mikusuto.Dialogue
         [SerializeField] private string npcName = "Villager";
         [SerializeField] private DialogueData dialogue;
         
+        public string NPCName => npcName;
+        
         [Header("Visual Feedback")]
         [SerializeField] private GameObject interactionPrompt;
         

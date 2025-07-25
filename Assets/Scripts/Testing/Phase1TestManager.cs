@@ -47,7 +47,7 @@ namespace Mikusuto.Testing
                 testDialogueButton.onClick.AddListener(TestDialogueSystem);
             
             if (testAudioButton != null)
-                testAudioButton.onClick.AddListener(TestAudioSystem);
+                testAudioButton.onClick.AddListener(TestAudioPlayback);
             
             if (openSettingsButton != null)
                 openSettingsButton.onClick.AddListener(OpenSettings);
@@ -235,7 +235,7 @@ namespace Mikusuto.Testing
             dialogueSystem.StartDialogue(testDialogue);
         }
         
-        void TestAudioSystem()
+        void TestAudioPlayback()
         {
             if (audioManager == null)
             {
@@ -259,7 +259,7 @@ namespace Mikusuto.Testing
         void OpenSettings()
         {
             // Try to find SettingsUI in the scene
-            var settingsUI = FindObjectOfType<Mikusuto.UI.SettingsUI>();
+            var settingsUI = FindFirstObjectByType<Mikusuto.UI.SettingsUI>();
             if (settingsUI != null)
             {
                 settingsUI.OpenSettings();
